@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">ZegoWhiteBoardEdu</string>
+    <string name="app_title_name">即构实时音视频-white白板</string>
+    <string name="refresh">刷新</string>
+    <string name="no_room">暂无房间</string>
+    <string name="no_room_tip">请刷新获取房间列表</string>
+    <string name="no_network">无法连接网络</string>
+    <string name="no_network_tip">请检查手机网络状态后再刷新</string>
+
+    <string name="tools">工具</string>
+    <string name="tool_pencil">铅笔️</string>
+    <string name="tool_selector">选择</string>
+    <string name="tool_rectangle">矩形</string>
+    <string name="tool_ellipse">椭圆</string>
+    <string name="tool_eraser">橡皮擦</string>
+    <string name="tool_text">文字</string>
+    <string name="tool_random_color">随机颜色</string>
+
+    <string name="thickness">粗细</string>
+    <string name="symbol_decrease">-</string>
+    <string name="symbol_increase">+</string>
+</resources>

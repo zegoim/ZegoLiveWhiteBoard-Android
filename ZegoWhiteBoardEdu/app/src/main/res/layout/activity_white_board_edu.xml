@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_ttv"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <com.zego.whiteboardedu.view.HW11TextureView
+            android:id="@+id/ttv_anchor"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <com.zego.whiteboardedu.view.HW11TextureView
+            android:id="@+id/ttv_joiner"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+    <ScrollView
+        android:id="@+id/sv_tools"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentEnd="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:visibility="gone"
+        tools:visibility="visible">
+
+        <LinearLayout
+            android:id="@+id/ll_tools"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/tools"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <include layout="@layout/line_horizontal_view" />
+
+            <TextView
+                android:id="@+id/tv_pencil"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:onClick="pencil"
+                android:padding="7dp"
+                android:text="@string/tool_pencil" />
+
+            <include layout="@layout/line_horizontal_view" />
+
+            <TextView
+                android:id="@+id/tv_selector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:onClick="selector"
+                android:padding="7dp"
+                android:text="@string/tool_selector" />
+
+            <include layout="@layout/line_horizontal_view" />
+
+            <TextView
+                android:id="@+id/tv_rectangle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:onClick="rectangle"
+                android:padding="7dp"
+                android:text="@string/tool_rectangle" />
+
+            <include layout="@layout/line_horizontal_view" />
+
+            <TextView
+                android:id="@+id/tv_ellipse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:onClick="ellipse"
+                android:padding="7dp"
+                android:text="@string/tool_ellipse" />
+
+            <include layout="@layout/line_horizontal_view" />
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:onClick="text"
+                android:padding="7dp"
+                android:text="@string/tool_text" />
+
+            <include layout="@layout/line_horizontal_view" />
+
+            <TextView
+                android:id="@+id/tv_eraser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:onClick="eraser"
+                android:padding="7dp"
+                android:text="@string/tool_eraser" />
+
+            <include layout="@layout/line_horizontal_view" />
+
+            <TextView
+                android:id="@+id/tv_random_color"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="?android:selectableItemBackground"
+                android:gravity="center"
+                android:onClick="randomColor"
+                android:padding="7dp"
+                android:text="@string/tool_random_color" />
+
+            <include layout="@layout/line_horizontal_view" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="@string/thickness"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="12sp" />
+
+            <include layout="@layout/line_horizontal_view" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_decrease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:onClick="thicknessDecrease"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/symbol_decrease"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tv_current_thickness"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="7dp" />
+
+                <TextView
+                    android:id="@+id/tv_increase"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="?android:selectableItemBackground"
+                    android:gravity="center"
+                    android:onClick="thicknessIncrease"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    android:text="@string/symbol_increase"
+                    android:textSize="16sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.herewhite.sdk.WhiteBroadView
+        android:id="@+id/white_broad_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toStartOf="@id/sv_tools"
+        android:layout_toEndOf="@id/ll_ttv" />
+</RelativeLayout>
